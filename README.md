@@ -1,156 +1,135 @@
-# Dotfiles for Arch Linux + Hyprland Setup
+# Dotfiles - Arch Linux + Hyprland with Rosé Pine Theme
 
-This repository contains my personal dotfiles for Arch Linux with Hyprland window manager setup. Below you'll find detailed instructions for installation and configuration of various components.
+My personal dotfiles for Arch Linux using Hyprland and the [Rosé Pine](https://rosepinetheme.com/) theme.
 
-## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Terminal Setup](#terminal-setup)
-- [Hyprland Configuration](#hyprland-configuration)
-- [Development Tools](#development-tools)
-<!-- - [Screenshots](#screenshots) -->
+<!-- ![Screenshot](path/to/your/screenshot.png) -->
 
-## Prerequisites
+## Required Packages
 
-Before you begin, make sure you have a fresh Arch Linux installation. You'll need an AUR helper (yay) for easier package management:
-
+### Core System
 ```bash
-# Install git first
-sudo pacman -S git base-devel
+# Window Manager & Desktop
+hyprland
+hypridle
+hyprlock
+hyprpaper
+xdg-desktop-portal-hyprland
+polkit-kde-agent
+swaync
+waybar
+wofi
+wlogout
+pyprland
 
-# Install yay
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+# Display & Audio
+grim
+slurp
+wl-clipboard  # Provides wl-copy and wl-paste
+cliphist
+dunst
+libnotify
+pavucontrol
+playerctl
+brightnessctl
+
+# File Management
+nautilus
+
+# Terminal & Shell
+zsh
+oh-my-zsh
+ghostty
+neofetch
 ```
 
-## Installation
-
-1. Clone this repository:
+### Development
 ```bash
-git clone https://github.com/YourUsername/dotfiles.git
-cd dotfiles
+# Core Tools
+git
+docker
+docker-compose
+nodejs
+npm
+python-pip
+jq
+
+# Version Management
+nvm
 ```
 
-2. Install required packages:
+### Rosé Pine Theme
 ```bash
-# Core packages
-yay -S zsh oh-my-zsh-git neofetch hyprland waybar wl-clipboard
-
-# Terminal utilities
-yay -S pkgfile docker docker-compose nodejs npm python
-
-# Development tools
-yay -S git nodejs npm python
+# From AUR
+rose-pine-gtk-theme-full      # https://github.com/rose-pine/gtk
+rose-pine-cursor             # https://github.com/rose-pine/cursor
 ```
 
-## Terminal Setup
-
-### Zsh Configuration
-The setup uses Zsh with Oh My Zsh framework and several plugins:
-
-1. Install Oh My Zsh:
+### Fonts
 ```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ttf-jetbrains-mono-nerd
+ttf-font-awesome
+noto-fonts-emoji
 ```
 
-2. Install required plugins:
+### Additional Utilities
 ```bash
-# Create custom plugins directory
-mkdir -p ~/.local/share/oh-my-zsh/plugins
-
-# Install custom plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.local/share/oh-my-zsh/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.local/share/oh-my-zsh/plugins/zsh-syntax-highlighting
+wget
+unzip
+unrar
+p7zip
+htop
 ```
 
-3. Copy .zshrc:
-```bash
-cp .zshrc ~/.zshrc
-```
+## Zsh Plugins
+Required plugins for Oh My Zsh:
+- git
+- sudo
+- colored-man-pages
+- extract
+- zsh-autosuggestions
+- zsh-syntax-highlighting
+- web-search
+- command-not-found
+- docker
+- docker-compose
+- node
+- python
 
-### Features
-- Theme: af-magic
-- Command auto-correction
-- Git integration
-- Docker and Docker Compose aliases
-- Development environment helpers (Node.js, Python)
-- Arch Linux specific aliases and helpers
+## Main Components
 
-## Hyprland Configuration
-
-### Required Packages
-```bash
-yay -S hyprland waybar wl-clipboard
-```
-
-### Features
-- Wayland-native clipboard management
-- Integration with various Wayland tools
-- Custom keybindings for window management
-
-## Development Tools
-
-### Installed Development Tools
-- Git with extensive aliases
-- Node.js and npm
-- Python
-- Docker and Docker Compose
-- Various development-related plugins and tools
-
-### Package Management
-The setup includes various package management tools:
-- pacman (Arch Linux package manager)
-- yay (AUR helper)
-- npm (Node.js package manager)
-- pip (Python package manager)
-
-<!-- ## Screenshots
-Add your screenshots here with descriptions:
+### Window Manager
+- Hyprland - Wayland compositor
+- Waybar - Status bar
+- Wofi - Application launcher
+- Wlogout - Logout menu
+- Hypridle - Idle management
+- Hyprpaper - Wallpaper manager
+- Swaync - Notification center
+- Pyprland - Python plugin manager for Hyprland
 
 ### Terminal
-[Terminal Screenshot Description]
+- Ghostty - Terminal emulator
+- Zsh - Shell
+- Oh My Zsh - Zsh framework
 
-### Hyprland Desktop
-[Desktop Screenshot Description]
+### Theme
+- Rosé Pine GTK theme
+- Rosé Pine cursor theme
+- Custom Waybar styling
+- GTK theme integration
+- Terminal color scheme
 
-### Development Environment
-[Development Environment Screenshot Description]
--->
+### Development
+- Full Git integration
+- Docker support
+- Node.js environment (with nvm)
+- Python development ready
 
-## Maintenance
+### File Management
+- Nautilus - GNOME file manager
+- Archive support (zip, unzip, rar, p7zip)
 
-### Updating the System
-```bash
-# Update system packages
-yay -Syu
-
-# Update Oh My Zsh
-omz update
-
-# Update all plugins
-git -C ~/.local/share/oh-my-zsh/plugins/zsh-autosuggestions pull
-git -C ~/.local/share/oh-my-zsh/plugins/zsh-syntax-highlighting pull
-```
-
-### Cleaning Up
-```bash
-# Remove orphaned packages
-yay -Rns $(pacman -Qtdq)
-
-# Clean package cache
-yay -Sc
-```
-
-## Additional Notes
-- The configuration is optimized for Arch Linux with Hyprland
-- Custom aliases are provided for common operations
-- Extensive Git integration with useful aliases
-- Docker and development environment ready
-- Wayland-native clipboard management
-
-## Contributing
-Feel free to fork this repository and customize it to your needs. Pull requests are welcome!
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details. 
+### Clipboard & Screenshots
+- Cliphist - Clipboard manager
+- wl-clipboard (wl-copy, wl-paste) - Wayland clipboard utilities
+- Grim + Slurp - Screenshot tools
