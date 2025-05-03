@@ -2,7 +2,31 @@
 
 My personal dotfiles for Arch Linux using Hyprland and the [Rosé Pine](https://rosepinetheme.com/) theme.
 
-<!-- ![Screenshot](path/to/your/screenshot.png) -->
+## Screenshots
+
+### Tiling Layout
+![Grid Layout](./screenshots/grid.png)
+*Hyprland tiling window management with Waybar and Rosé Pine theme*
+
+### Floating Windows
+![Floating Layout](./screenshots/float.png)
+*Hyprland floating window layout showcase*
+
+### Application Launcher
+![Wofi](./screenshots/wofi.png)
+*Wofi launcher with Rosé Pine styling*
+
+### Logout Screen
+![Logout](./screenshots/logout.png)
+*Wlogout with Rosé Pine theme*
+
+### Desktop
+![Desktop](./screenshots/desktop.png)
+*Hyprland with Waybar and Rosé Pine theme*
+
+### File Manager
+![Nautilus](./screenshots/nautilus.png)
+*Nautilus with Rosé Pine GTK theme*
 
 ## Required Packages
 
