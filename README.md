@@ -24,7 +24,7 @@ pyprland
 # Display & Audio
 grim
 slurp
-wl-clipboard  # Provides wl-copy and wl-paste
+wl-clipboard  
 cliphist
 dunst
 libnotify
