@@ -45,6 +45,17 @@ wofi
 wlogout
 pyprland
 
+# Waybar Dependencies & Utilities
+network-manager-applet      # Network management
+nm-connection-editor       # Network connections GUI
+power-profiles-daemon     # Power profiles
+pavucontrol              # Audio control
+playerctl               # Media player control
+bluez                  # Bluetooth support
+bluez-utils           # Bluetooth utilities
+brightnessctl        # Brightness control
+mpris                # Media player integration
+
 # Display & Audio
 grim
 slurp
