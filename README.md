@@ -45,6 +45,9 @@ wofi
 wlogout
 pyprland
 
+# System Information & Fetch Tools
+fastfetch                  # Fast system information tool 
+
 # Waybar Dependencies & Utilities
 network-manager-applet      # Network management
 nm-connection-editor       # Network connections GUI
@@ -146,6 +149,7 @@ Required plugins for Oh My Zsh:
 - Ghostty - Terminal emulator
 - Zsh - Shell
 - Oh My Zsh - Zsh framework
+- Fastfetch - System information tool
 
 ### Theme
 - Rosé Pine GTK theme
