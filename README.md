@@ -50,25 +50,26 @@ fastfetch                  # Fast system information tool
 
 # Waybar Dependencies & Utilities
 network-manager-applet      # Network management
-nm-connection-editor       # Network connections GUI
-power-profiles-daemon     # Power profiles
-pavucontrol              # Audio control
-playerctl               # Media player control
-bluez                  # Bluetooth support
-bluez-utils           # Bluetooth utilities
-brightnessctl        # Brightness control
-mpris                # Media player integration
+nm-connection-editor        # Network connections GUI
+power-profiles-daemon       # Power profiles
+pavucontrol                 # Audio control
+playerctl                   # Media player control
+bluez                       # Bluetooth support
+bluez-utils                 # Bluetooth utilities
+brightnessctl               # Brightness control
+mpris                       # Media player integration
 
-# Display & Audio
-grim
-slurp
-wl-clipboard  
-cliphist
-dunst
-libnotify
-pavucontrol
-playerctl
-brightnessctl
+# Display & Screenshot Tools
+grim                    # Screenshot utility
+slurp                   # Area selection tool
+swappy                  # Screenshot editor
+wl-clipboard            # Wayland clipboard utilities
+cliphist                # Clipboard manager
+dunst                   # Notification daemon
+libnotify               # Notification library
+pavucontrol             # Audio control
+playerctl               # Media player control
+brightnessctl           # Brightness control
 
 # File Management
 nautilus
