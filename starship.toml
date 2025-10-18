@@ -1,0 +1,93 @@
+add_newline = false
+
+format = """$directory $git_branch$git_status$git_state $container $kubernetes $aws $docker_context $nodejs $python $ruby $cmd_duration$line_break$character"""
+right_format = "$battery $username@$hostname"
+
+[username]
+show_always = true
+style_user = "#6272A4"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "#44475A"
+format = "[$hostname]($style)"
+
+[directory]
+style = "#6272A4"
+truncation_length = 1
+truncation_symbol = ""
+fish_style_pwd_dir_length = 1
+read_only = ""
+format = "[$path]($style)[$read_only]($read_only_style)"
+
+[battery]
+full_symbol = "•"
+charging_symbol = "⇡"
+discharging_symbol = "⇣"
+[[battery.display]]
+threshold = 100
+style = "bold #44475A"
+
+[git_branch]
+format = "on [$branch]($style)"
+style = "bold #6272A4"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](bright-black)($ahead_behind$stashed)]($style)"
+style = "#44475A"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[nodejs]
+format = "via [⬢ $version]($style) "
+style = "bold #6272A4"
+
+[python]
+format = "via [🐍 $version]($style) "
+style = "bold #6272A4"
+
+[rust]
+format = "via [🦀 $version]($style) "
+style = "bold #6272A4"
+
+[ruby]
+format = "via [💎 $version]($style) "
+style = "bold #6272A4"
+
+[docker_context]
+format = "via [🐳 $context]($style) "
+style = "bold #6272A4"
+
+[container]
+format = "(inside [$symbol]($style)) "
+symbol = "🐳"
+style = "bold #6272A4"
+
+[kubernetes]
+format = "via [☸️ $context]($style) "
+style = "bold #6272A4"
+disabled = false
+
+[aws]
+format = "on [☁️ $profile]($style) "
+style = "bold #6272A4"
+
+[cmd_duration]
+min_time = 1000
+format = "[$duration]($style) "
+style = "#44475A"
+
+[character]
+success_symbol = "[»](bold #6272A4)"
+error_symbol = "[»](bold #44475A)"
+vimcmd_symbol = "[«](bold #6272A4)"
