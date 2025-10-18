@@ -206,6 +206,12 @@ if confirm-overwrite $config/ghostty
     ln -s (realpath ghostty) $config/ghostty
 end
 
+# Uwsm
+if confirm-overwrite $config/uwsm
+    log 'Installing uwsm config...'
+    ln -s (realpath uwsm) $config/uwsm
+end
+
 # Install spicetify
 if set -q _flag_spotify
     log 'Installing spotify (spicetify)...'
