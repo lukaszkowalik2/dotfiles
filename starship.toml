@@ -17,7 +17,7 @@ format = "[$hostname]($style)"
 style = "#6272A4"
 truncation_length = 1
 truncation_symbol = ""
-fish_style_pwd_dir_length = 1
+fish_style_pwd_dir_length = 100
 read_only = ""
 format = "[$path]($style)[$read_only]($read_only_style)"
 
